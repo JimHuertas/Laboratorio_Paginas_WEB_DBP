@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.3.1.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $.get("http://localhost:8080/CategoryRestService/FindAll",function(datos) {
+        console.log(datos);
+		});
+	$("#bttAdd").click(function(){
+		$.get("http://localhost:8080/CategoryRestService/Add",function(datos)) {
+        	console.log(datos);
+		}});
+	$("#bttDelete").click(function(){
+		$.get("http://localhost:8080/CategoryRestService/Delete",function(datos)) {
+        	console.log(datos);
+		}});
+});
+</script>
+</head>
+<body>>
+	<button id="bttAdd">Add</button><br>
+	<button id="bttDelete">Delete</button>
+
+</body>
+</html>
